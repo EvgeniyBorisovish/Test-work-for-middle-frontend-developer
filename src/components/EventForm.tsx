@@ -35,18 +35,9 @@ const EventForm:FC<EventFormProps> = (props:EventFormProps)=>{
         
         props.submit({...event,author:localStorage.getItem("userName") as string})
         setEvent({...event,description:"",guest:"",date:""})
-        //data.guest = ""
+        
         props.closeForm()
-
-        
-            form.resetFields();
-        
-         
-        
-      
-        
-
-        
+        form.resetFields();
     }
     console.log('event',event)
     return(
@@ -108,7 +99,7 @@ const EventForm:FC<EventFormProps> = (props:EventFormProps)=>{
                 
            <Form.Item>
                
-               <Button type="primary" htmlType="submit" disabled={!event.description || !event.guest || !event.date } >Создать</Button>
+               <Button type="primary" htmlType="submit" disabled={!event.description || !event.guest || !event.date }>Создать</Button>
            </Form.Item>
            
 
